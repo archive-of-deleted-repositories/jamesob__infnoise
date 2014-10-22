@@ -4,6 +4,8 @@ bool inmHealthCheckAddBit(bool bit, bool even);
 bool inmHealthCheckOkToUseData(void);
 double inmHealthCheckEstimateK(void);
 double inmHealthCheckEstimateEntropyPerBit(void);
+
 // Returns number of bytes of entropy added so far
-uint32_t inmHealthCheckGetEntropyLevel(void);
-void inmHealthCheckReduceEntropyLevel(uint32_t numBytes);
+uint32_t inmGetEntropyLevel(void);
+void inmClearEntropyLevel(void);
+void inmWriteEntropyToPool(uint8_t bytes, uint32_t length, uint32_t entropy);
